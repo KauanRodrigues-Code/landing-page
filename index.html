@@ -4,95 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNA Fitness Center | Arapoti</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="navbar">
-        <div class="logo">DNA <span>FITNESS</span></div>
+    <header id="header">
+        <div class="logo">DNA<span>FITNESS</span></div>
         <a href="https://wa.me/5543999999999" class="btn-nav">MATRICULE-SE</a>
     </header>
 
     <section class="hero">
-        <div class="hero-content reveal">
-            <h1>SUA MELHOR VERSÃO <br><span>COMEÇA NO DNA</span></h1>
-            <p>Musculação, Jiu-Jitsu e Ginástica na academia mais completa de Arapoti.</p>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="reveal">SUA MELHOR <br><span>VERSÃO</span> COMEÇA <br>NO DNA</h1>
+            <p class="reveal">A maior e mais moderna estrutura de Arapoti com Musculação, Jiu-Jitsu e Ginástica.</p>
+            <a href="#planos" class="btn-main reveal">CONHECER PLANOS</a>
         </div>
     </section>
 
-    <main class="container">
-        <section class="cat-section reveal">
-            <h2 class="cat-title">MUSCULAÇÃO</h2>
-            <div class="cat-layout">
-                <div class="cat-desc">
-                    <p>Treine na maior e mais moderna estrutura da região. Equipamentos de ponta e equipe especializada para te orientar em cada movimento.</p>
-                    <ul class="horarios">
-                        <li><strong>Segunda a Sexta:</strong> 05h às 22h</li>
-                        <li><strong>Sábado:</strong> 09h às 12h | 13h30 às 17h</li>
-                    </ul>
-                </div>
-                <div class="price-cards">
-                    <div class="p-card">
-                        <span>MENSAL</span>
-                        <p>R$ 148,00</p>
-                    </div>
-                    <div class="p-card featured">
-                        <span class="tag">MAIS VENDIDO</span>
-                        <span>ANUAL</span>
-                        <p>R$ 128,00</p>
-                        <small>recorrente</small>
-                    </div>
-                    <div class="p-card">
-                        <span>FAMÍLIA</span>
-                        <p>R$ 133,00</p>
-                        <small>3+ pessoas</small>
-                    </div>
-                </div>
+    <section class="services section-padding">
+        <h2 class="section-title">NOSSOS <span>SERVIÇOS</span></h2>
+        <div class="container-grid">
+            <div class="service-card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=500');"></div>
+                <h3>Musculação</h3>
+                <p>Treino de força com equipamentos de última geração e acompanhamento profissional para garantir seus resultados.</p>
             </div>
-        </section>
+            <div class="service-card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1552072805-2a9039d00e57?q=80&w=500');"></div>
+                <h3>Jiu-Jitsu</h3>
+                <p>Arte suave para todas as idades. Disciplina, defesa pessoal e condicionamento físico no tatame.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1518611012118-2969c636002c?q=80&w=500');"></div>
+                <h3>Step & Jump</h3>
+                <p>Aulas coletivas de alta intensidade para queimar calorias e melhorar seu fôlego com muita energia.</p>
+            </div>
+            <div class="service-card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=500');"></div>
+                <h3>Dança</h3>
+                <p>Ritmos variados para você se exercitar sorrindo. Melhore sua coordenação e perca peso dançando.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="cat-section reveal">
-            <h2 class="cat-title">JIU-JITSU</h2>
-            <div class="cat-layout">
-                <div class="cat-desc">
-                    <p>Aulas de Jiu-Jitsu para todas as idades com a metodologia Gracie Barra. Disciplina, defesa pessoal e saúde.</p>
-                    <div class="promo-box">
-                        <p>Alunos de musculação DNA pagam preço especial:</p>
-                        <span class="highlight">R$ 100,00</span>
-                    </div>
-                </div>
-                <div class="jiu-classes">
-                    <div class="class-item">Pequenos Campeões (5-9 anos)</div>
-                    <div class="class-item">Jr e Adolescentes</div>
-                    <div class="class-item">GB1, GB2 e NO-GI</div>
-                </div>
+    <section id="planos" class="pricing section-padding">
+        <h2 class="section-title">NOSSOS <span>PLANOS</span></h2>
+        <div class="container-grid">
+            <div class="price-card reveal">
+                <h3>MENSAL</h3>
+                <div class="price">R$ 148<span>,00</span></div>
+                <p>Ideal para quem busca flexibilidade sem fidelidade.</p>
+                <a href="#" class="btn-buy">ASSINAR AGORA</a>
             </div>
-        </section>
-
-        <section class="cat-section reveal">
-            <h2 class="cat-title">STEP & JUMP</h2>
-            <div class="cat-layout">
-                <div class="cat-desc">
-                    <p>Aulas de ginástica localizada, Step e Jump com a Prof. Cíntia. Energia lá no alto e queima calórica garantida.</p>
-                </div>
-                <div class="price-cards">
-                    <div class="p-card">
-                        <span>DIÁRIA</span>
-                        <p>R$ 25,00</p>
-                    </div>
-                    <div class="p-card">
-                        <span>PLANO VIAGEM</span>
-                        <p>R$ 75,00</p>
-                        <small>6 dias</small>
-                    </div>
-                </div>
+            <div class="price-card featured reveal">
+                <div class="badge">MAIS VENDIDO</div>
+                <h3>ANUAL</h3>
+                <div class="price">R$ 128<span>,00</span></div>
+                <p>O melhor custo-benefício para transformar sua vida.</p>
+                <a href="#" class="btn-buy">ASSINAR AGORA</a>
             </div>
-        </section>
-    </main>
+            <div class="price-card reveal">
+                <h3>FAMÍLIA</h3>
+                <div class="price">R$ 133<span>,00</span></div>
+                <p>Valor por pessoa para grupos de 3 ou mais membros.</p>
+                <a href="#" class="btn-buy">ASSINAR AGORA</a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>DNA Fitness Center - Arapoti/PR | CNPJ: 40.064.756/0001-19</p>
+        <p>DNA FITNESS CENTER - Arapoti/PR</p>
+        <p>CNPJ: 40.064.756/0001-19</p>
     </footer>
 
     <script src="script.js"></script>
