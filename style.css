@@ -1,57 +1,53 @@
 :root {
     --primary: #ffcc00;
-    --bg: #000;
-    --card: #151515;
+    --card-bg: #1a1a1a;
+    --inner-bg: #000;
     --text: #fff;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; padding-bottom: 50px; }
+body { background: #000; color: var(--text); font-family: 'Poppins', sans-serif; }
 
-header { text-align: center; padding: 30px; border-bottom: 1px solid #222; }
-.logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.5rem; }
-.logo span { color: var(--primary); }
+header { padding: 30px; text-align: center; font-family: 'Montserrat'; font-weight: 900; border-bottom: 1px solid #222; }
+header span { color: var(--primary); }
 
-.container { width: 90%; max-width: 500px; margin: 0 auto; }
+.container { width: 95%; max-width: 450px; margin: 0 auto; padding-bottom: 50px; }
 
-/* Blocos de Categoria */
-.cat-block { 
-    background: var(--card); border-radius: 20px; padding: 25px; 
-    margin-top: 40px; border: 1px solid #222; 
+/* Estilo dos Cards */
+.card { 
+    background: var(--card-bg); border-radius: 20px; padding: 20px; 
+    margin-top: 30px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.cat-header { text-align: center; margin-bottom: 20px; }
-.cat-header h2 { font-family: 'Montserrat'; font-weight: 900; color: var(--primary); font-size: 1.8rem; }
-.cat-header p { font-size: 0.85rem; color: #888; margin-top: 5px; }
+.card-header { text-align: center; margin-bottom: 20px; position: relative; }
+.card-header h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--primary); letter-spacing: -1px; }
 
-.tag-top { 
-    display: inline-block; background: var(--primary); color: #000; 
-    font-size: 0.6rem; font-weight: 900; padding: 4px 12px; border-radius: 50px; margin-bottom: 10px;
+.badge { 
+    background: var(--primary); color: #000; font-size: 0.65rem; font-weight: 900; 
+    padding: 3px 10px; border-radius: 5px; margin-bottom: 5px; display: inline-block;
 }
-.tag-top.red { background: #ff4444; color: #fff; }
+.badge.red { background: #ff4444; color: #fff; }
 
-/* Cards de Horário */
-.schedule-card { background: #000; border-radius: 12px; padding: 15px; margin-bottom: 20px; }
-.row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; font-size: 0.8rem; }
-.row:last-child { border: none; }
-.row.pink { color: #ff00ff; border-left: 3px solid #ff00ff; padding-left: 10px; }
+.section-title { font-size: 0.75rem; font-weight: 900; color: #666; margin: 15px 0 10px 5px; text-transform: uppercase; letter-spacing: 1px; }
 
-/* Jiu Jitsu Específico */
-.row-jiu { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #222; }
-.jt-info span { display: block; font-weight: 600; font-size: 0.85rem; }
-.jt-info small { color: #ff4444; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
-.jt-time { background: #ff4444; color: #fff; padding: 5px 10px; border-radius: 5px; font-size: 0.75rem; font-weight: 900; }
+/* Grupos de Informação */
+.info-group, .price-group { background: var(--inner-bg); border-radius: 12px; padding: 5px 15px; margin-bottom: 15px; }
 
-/* Preços */
-.price-list { background: #000; border-radius: 12px; overflow: hidden; }
-.p-item { display: flex; justify-content: space-between; padding: 12px 15px; border-bottom: 1px solid #222; font-size: 0.9rem; }
-.p-item.highlight { color: var(--primary); border-bottom: 2px solid var(--primary); }
+.info-row, .price-row { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 12px 0; border-bottom: 1px solid #222; font-size: 0.85rem; 
+}
+.info-row:last-child, .price-row:last-child { border: none; }
 
-.promo-box { background: #ffcc0015; border: 1px dashed var(--primary); padding: 15px; border-radius: 10px; text-align: center; color: var(--primary); font-size: 0.85rem; }
+.price-row.highlight { color: var(--primary); font-weight: 600; border-bottom: 2px solid var(--primary); }
+.sub-text small { color: #888; text-transform: uppercase; font-size: 0.7rem; }
+.dance { color: #ff00ff; }
 
-.mini-prices { display: flex; gap: 10px; justify-content: center; margin-top: 15px; }
-.tag { background: #222; padding: 5px 15px; border-radius: 50px; font-size: 0.75rem; color: var(--primary); font-weight: 600; }
+/* Caixas de Alerta e Tags */
+.alert-box { background: #ffcc0015; border: 1px dashed var(--primary); padding: 12px; border-radius: 10px; text-align: center; font-size: 0.8rem; color: var(--primary); }
+.price-tags { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
+.price-tags span { background: #333; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 600; }
 
-/* Animação */
-.reveal { opacity: 0; transform: translateY(20px); transition: 0.6s all ease; }
+/* Animações Scroll */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
