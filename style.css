@@ -1,99 +1,105 @@
+/* CONFIGURAÇÕES GERAIS */
 :root {
-    --yellow: #ffcc00;
-    --black: #000000;
-    --gray: #121212;
-    --light-gray: #1e1e1e;
-    --text-muted: #b0b0b0;
-    --card-bg: rgba(20, 20, 20, 0.8);
+    --brand: #ffcc00;
+    --bg-dark: #000000;
+    --card-dark: #0a0a0a;
+    --text-main: #ffffff;
+    --text-dim: #999999;
+    --border: #1a1a1a;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { 
-    background: var(--black);
-    /* Background com textura de pontos (Mesh) para visual moderno */
-    background-image: radial-gradient(circle at 1px 1px, #1e1e1e 1px, transparent 0);
-    background-size: 32px 32px;
-    background-attachment: fixed;
-    color: white; 
-    font-family: 'Poppins', sans-serif; 
-    line-height: 1.6; 
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    /* Fundo com textura discreta */
+    background-image: radial-gradient(circle at 2px 2px, #111 1px, transparent 0);
+    background-size: 40px 40px;
 }
 
 /* NAVBAR */
 header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 5%; background: rgba(0,0,0,0.9);
-    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
+    padding: 25px 8%; background: rgba(0,0,0,0.95);
+    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border);
     backdrop-filter: blur(10px);
 }
-.logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.4rem; }
-.logo span { color: var(--yellow); }
-.btn-nav { background: var(--yellow); color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.8rem; transition: 0.3s; }
-.btn-nav:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 204, 0, 0.3); }
+.logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.6rem; letter-spacing: -1px; }
+.logo span { color: var(--brand); }
+.btn-nav { background: var(--brand); color: #000; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: 800; font-size: 0.8rem; transition: 0.3s; }
+.btn-nav:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4); }
 
 /* HERO */
-.hero { height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero h1 { font-family: 'Montserrat'; font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.1; font-weight: 900; }
-.hero h1 span { color: var(--yellow); }
-.hero p { color: var(--text-muted); margin-top: 15px; font-size: 1.1rem; }
+.hero { height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; }
+.hero h1 { font-family: 'Montserrat'; font-size: clamp(2.5rem, 10vw, 4.5rem); line-height: 1; font-weight: 900; }
+.hero h1 span { color: var(--brand); }
+.hero p { color: var(--text-dim); margin-top: 20px; font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-/* CONTAINER E CARDS DE MODALIDADE */
-.container { padding: 40px 5% 100px; max-width: 1200px; margin: 0 auto; }
+/* CONTAINER DAS MODALIDADES */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5% 100px; }
 
-.card-modalidade { 
-    background: var(--card-bg);
-    border: 1px solid #222;
-    padding: 50px;
-    border-radius: 25px;
-    margin-bottom: 50px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    backdrop-filter: blur(12px);
-    transition: 0.4s;
+.modality-block {
+    margin-bottom: 150px; /* Grande espaçamento entre as modalidades */
+    padding-top: 50px;
 }
-.card-modalidade:hover { border-color: #444; transform: translateY(-5px); }
 
-.cat-title { font-family: 'Montserrat'; font-size: 2.2rem; border-left: 6px solid var(--yellow); padding-left: 20px; margin-bottom: 35px; letter-spacing: -1px; }
+.main-title {
+    font-family: 'Montserrat'; font-size: 3.5rem; font-weight: 900;
+    text-align: center; margin-bottom: 30px; letter-spacing: -2px;
+}
 
-.cat-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
-.cat-desc p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px; }
+.intro-text { text-align: center; max-width: 800px; margin: 0 auto 60px; color: var(--text-dim); font-size: 1.2rem; line-height: 1.8; }
 
-/* HORÁRIOS E CLASSES */
-.horarios { list-style: none; background: rgba(0,0,0,0.4); padding: 25px; border-radius: 12px; font-size: 0.9rem; border: 1px solid #333; }
-.horarios li { margin-bottom: 8px; border-bottom: 1px solid #222; padding-bottom: 8px; }
-.horarios li:last-child { border: none; margin: 0; padding: 0; }
+.section-divider {
+    display: flex; align-items: center; text-align: center; margin: 60px 0 40px;
+}
+.section-divider::before, .section-divider::after {
+    content: ''; flex: 1; border-bottom: 1px solid var(--border);
+}
+.section-divider span { padding: 0 20px; font-size: 0.8rem; font-weight: 800; letter-spacing: 4px; color: #444; }
 
-.jiu-classes { display: flex; flex-direction: column; gap: 12px; }
-.class-item { background: var(--light-gray); padding: 18px; border-radius: 10px; border-left: 4px solid #333; transition: 0.3s; font-weight: 600; }
-.class-item:hover { border-left-color: var(--yellow); background: #252525; }
+/* GRIDS DE HORÁRIOS */
+.schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 40px; }
+.s-card { background: var(--card-dark); border: 1px solid var(--border); padding: 45px; border-radius: 24px; text-align: center; }
+.s-label { display: block; color: var(--brand); font-weight: 800; font-size: 0.9rem; margin-bottom: 15px; letter-spacing: 1px; }
+.s-time { font-size: 2.2rem; font-weight: 800; }
+.s-group p { font-size: 1.1rem; margin: 10px 0; color: #888; }
+.s-group span { color: #fff; font-weight: 600; }
 
-/* CARDS DE PREÇO */
-.price-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
-.p-card { background: #1a1a1a; padding: 30px 15px; border-radius: 15px; text-align: center; border: 1px solid #333; transition: 0.3s; position: relative; }
-.p-card.featured { border: 2px solid var(--yellow); background: #221f10; }
-.p-card p { font-size: 1.8rem; font-weight: 900; color: var(--yellow); margin: 12px 0; }
-.p-card span { font-weight: bold; font-size: 0.85rem; color: white; }
-.tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: black; font-size: 0.65rem; padding: 5px 12px; border-radius: 20px; font-weight: 900; }
+/* GRIDS DE PLANOS */
+.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+.p-card { background: var(--card-dark); border: 1px solid var(--border); padding: 50px 25px; border-radius: 24px; text-align: center; transition: 0.3s; position: relative; }
+.p-card h4 { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 15px; font-weight: 600; letter-spacing: 1px; }
+.p-card .price { font-size: 2.2rem; font-weight: 900; color: #fff; display: block; }
+.p-card small { color: #555; font-size: 0.8rem; display: block; margin-top: 10px; }
 
-/* PROMO BOX E BÔNUS */
-.promo-box { background: rgba(255, 204, 0, 0.08); border: 1px dashed var(--yellow); padding: 25px; border-radius: 15px; text-align: center; }
-.highlight { font-size: 1.8rem; font-weight: 900; color: var(--yellow); display: block; margin: 5px 0; }
-.bonus-tag { display: inline-block; background: #28a745; color: white; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; margin-bottom: 20px; }
+.p-card.featured { border: 2px solid var(--brand); background: linear-gradient(to bottom, #0a0a0a, #1a1700); }
+.badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--brand); color: #000; font-size: 0.65rem; padding: 6px 16px; border-radius: 50px; font-weight: 900; }
 
-/* BOTÃO CONSULTAR */
-.btn-check { text-align: center; color: var(--yellow); text-decoration: none; font-weight: bold; margin-top: 15px; border: 1px solid var(--yellow); padding: 12px; border-radius: 8px; transition: 0.3s; font-size: 0.9rem; }
-.btn-check:hover { background: var(--yellow); color: black; }
+/* PROMO E BÔNUS */
+.promo-center { display: flex; justify-content: center; margin-bottom: 40px; }
+.promo-card, .bonus-card { background: var(--card-dark); border: 1px dashed #333; padding: 50px; border-radius: 30px; text-align: center; max-width: 500px; width: 100%; }
+.highlight-price { font-size: 3rem; font-weight: 900; color: var(--brand); display: block; margin-top: 10px; }
+.bonus-title { color: #2ecc71; font-weight: 800; letter-spacing: 2px; font-size: 0.9rem; display: block; margin-bottom: 15px; }
+.highlight-green { font-size: 2.2rem; font-weight: 900; color: #2ecc71; display: block; margin: 10px 0; }
 
-/* ANIMAÇÃO */
-.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+/* LISTAS (JIU JITSU) */
+.list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+.l-item { background: var(--card-dark); padding: 25px; border-radius: 15px; border-left: 4px solid #333; font-weight: 600; text-align: center; }
+
+/* ANIMAÇÕES */
+.reveal { opacity: 0; transform: translateY(50px); transition: 1s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .cat-layout { grid-template-columns: 1fr; gap: 30px; }
-    .hero { height: 50vh; }
-    .card-modalidade { padding: 30px 20px; }
-    .cat-title { font-size: 1.8rem; }
-}
+/* FOOTER */
+footer { text-align: center; padding: 80px 0; color: #333; font-size: 0.8rem; border-top: 1px solid var(--border); }
 
-footer { text-align: center; padding: 60px; color: #555; font-size: 0.85rem; border-top: 1px solid #111; }
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .main-title { font-size: 2.5rem; }
+    .s-time { font-size: 1.8rem; }
+    .modality-block { margin-bottom: 80px; }
+}
