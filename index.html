@@ -4,91 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNA Fitness Center</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <header id="navbar">
         <div class="logo">DNA <span>FITNESS</span></div>
+        <a href="https://wa.me/5543999999999" class="btn-nav">MATRICULE-SE</a>
     </header>
 
-    <main class="container">
+    <section class="hero">
+        <div class="hero-content reveal">
+            <h1>SUA MELHOR VERSÃO <br><span>COMEÇA NO DNA</span></h1>
+            <p>Musculação, Jiu-Jitsu e Ginástica na academia mais completa de Arapoti.</p>
+            <a href="#planos" class="btn-main">CONHECER PLANOS</a>
+        </div>
+    </section>
+
+    <main class="container" id="planos">
+        <h2 class="section-title reveal">NOSSOS PLANOS</h2>
         
-        <section class="card reveal">
-            <div class="card-header">
-                <span class="badge">MAIS PROCURADA</span>
-                <h2>MUSCULAÇÃO</h2>
-            </div>
-            
-            <div class="section-title">HORÁRIOS</div>
-            <div class="info-group">
-                <div class="info-row"><span>Segunda a Sexta</span> <strong>05:00h às 22:00h</strong></div>
-                <div class="info-row"><span>Sábados (Manhã)</span> <strong>09:00h às 12:00h</strong></div>
-                <div class="info-row"><span>Sábados (Tarde)</span> <strong>13:30h às 17:00h</strong></div>
+        <div class="plans-grid">
+            <div class="plan-card reveal">
+                <h3>MENSAL</h3>
+                <div class="price">R$ 148,00</div>
             </div>
 
-            <div class="section-title">PLANOS</div>
-            <div class="price-group">
-                <div class="price-row"><span>Mensal</span> <strong>R$ 148</strong></div>
-                <div class="price-row"><span>Trimestral</span> <strong>R$ 140</strong></div>
-                <div class="price-row highlight"><span>Anual</span> <strong>R$ 128 <small>/mês</small></strong></div>
-                <div class="price-row"><span>Família (3+)</span> <strong>R$ 133</strong></div>
-            </div>
-        </section>
-
-        <section class="card reveal">
-            <div class="card-header">
-                <span class="badge red">GRACIE BARRA</span>
-                <h2>JIU-JITSU</h2>
+            <div class="plan-card featured reveal">
+                <div class="badge">MAIS VENDIDO</div>
+                <h3>ANUAL</h3>
+                <div class="price">R$ 128,00</div>
+                <div class="period">/mês</div>
             </div>
 
-            <div class="section-title">HORÁRIOS E TURMAS</div>
-            <div class="info-group">
-                <div class="info-row">
-                    <div class="sub-text">Pequenos Campeões (5-9a)<br><small>Terça e Quinta</small></div>
-                    <strong>09h - 09h40</strong>
-                </div>
-                <div class="info-row">
-                    <div class="sub-text">Pequenos Campeões (5-8a)<br><small>Segunda e Quarta</small></div>
-                    <strong>17h20 - 18h</strong>
-                </div>
-                <div class="info-row">
-                    <div class="sub-text">Jr e Adolescentes (9-13a)<br><small>Segunda e Quarta</small></div>
-                    <strong>18h10 - 19h</strong>
-                </div>
-                <div class="info-row">
-                    <div class="sub-text">GB 1 e GB 2 (+14a)<br><small>Seg/Qua/Sex</small></div>
-                    <strong>19h - 20h</strong>
-                </div>
-                <div class="info-row">
-                    <div class="sub-text">No-Gi (+14a)<br><small>Terça e Quinta</small></div>
-                    <strong>19h30 - 20h30</strong>
-                </div>
+            <div class="plan-card reveal">
+                <h3>FAMÍLIA</h3>
+                <p>A partir de</p>
+                <div class="price">R$ 133,00</div>
             </div>
-            
-            <div class="alert-box">
-                Alunos de Musculação pagam apenas <strong>R$ 100</strong> no Jiu-Jitsu.
-            </div>
-        </section>
-
-        <section class="card reveal">
-            <div class="card-header">
-                <h2>COLETIVAS</h2>
-            </div>
-
-            <div class="info-group">
-                <div class="info-row"><span>Ginástica Localizada</span> <strong>Seg/Qua 17h30</strong></div>
-                <div class="info-row"><span>Step e Jump</span> <strong>Ter/Qui 19h00</strong></div>
-                <div class="info-row dance"><span>Aula de Dança</span> <strong>Seg/Qua 18h45</strong></div>
-            </div>
-
-            <div class="price-tags">
-                <span>Diária: R$ 25</span>
-                <span>Plano Viagem: R$ 75</span>
-            </div>
-        </section>
-
+        </div>
     </main>
 
     <script src="script.js"></script>
