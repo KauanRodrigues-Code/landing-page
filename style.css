@@ -1,74 +1,92 @@
+/* Variáveis de Cor */
 :root {
-    --amarelo: #ffcc00; /* Ajuste para o tom exato do logo */
-    --preto-bg: #0a0a0a;
-    --preto-card: #1a1a1a;
-    --branco: #ffffff;
+    --primary: #ffcc00;
+    --dark: #0a0a0a;
+    --dark-card: #141414;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
 }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    margin: 0;
-    font-family: 'Arial Black', sans-serif;
-    background-color: var(--preto-bg);
-    color: var(--branco);
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* Header */
+header {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; }
+.logo span { color: var(--primary); }
+
+.btn-whatsapp {
+    background: var(--primary);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero */
 .hero {
-    height: 90vh;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('foto-academia.jpg');
-    background-size: cover;
 }
 
-h1 { font-size: 3.5rem; line-height: 1; }
-h1 span { color: var(--amarelo); }
+.hero-content h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 20px; }
+.hero-content h1 span { color: var(--primary); }
+.btn-cta { background: var(--primary); color: #000; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: 900; }
 
-.btn-main {
-    background-color: var(--amarelo);
-    color: #000;
-    padding: 15px 40px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-    transition: transform 0.3s;
+/* Grid e Seções */
+.section-padding { padding: 80px 5%; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+.section-title span { color: var(--primary); }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
-.btn-main:hover { transform: scale(1.05); }
-
-.grid-planos {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 50px 20px;
+.card, .price-card {
+    background: var(--dark-card);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: var(--transition);
 }
 
-.plano {
-    background: var(--preto-card);
-    padding: 30px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    text-align: center;
-    width: 250px;
-}
+.card:hover, .price-card:hover { border-color: var(--primary); transform: translateY(-10px); }
 
-.plano.destaque {
-    border: 2px solid var(--amarelo);
-    transform: scale(1.1);
-    position: relative;
-}
+/* Planos */
+.price-card.featured { border: 2px solid var(--primary); position: relative; }
+.badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #000; padding: 5px 15px; font-size: 0.8rem; border-radius: 20px; font-weight: bold; }
+.price { font-size: 3rem; font-weight: 900; color: var(--primary); margin: 20px 0; }
+.price span { font-size: 1rem; color: #888; }
 
-.badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--amarelo);
-    color: #000;
-    padding: 5px 15px;
-    font-size: 0.8rem;
-    border-radius: 20px;
+footer { padding: 40px; text-align: center; border-top: 1px solid #222; color: #666; }
+
+/* Celular */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
 }
