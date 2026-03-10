@@ -1,53 +1,48 @@
 :root {
-    --primary: #ffcc00;
-    --card-bg: #1a1a1a;
-    --inner-bg: #000;
-    --text: #fff;
+    --yellow: #ffcc00;
+    --black: #0b0b0b;
+    --card-bg: #161616;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: #000; color: var(--text); font-family: 'Poppins', sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--black); color: white; font-family: 'Poppins', sans-serif; }
 
-header { padding: 30px; text-align: center; font-family: 'Montserrat'; font-weight: 900; border-bottom: 1px solid #222; }
-header span { color: var(--primary); }
-
-.container { width: 95%; max-width: 450px; margin: 0 auto; padding-bottom: 50px; }
-
-/* Estilo dos Cards */
-.card { 
-    background: var(--card-bg); border-radius: 20px; padding: 20px; 
-    margin-top: 30px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 5%; background: rgba(0,0,0,0.9);
+    position: sticky; top: 0; z-index: 1000;
 }
+.logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.5rem; }
+.logo span { color: var(--yellow); }
 
-.card-header { text-align: center; margin-bottom: 20px; position: relative; }
-.card-header h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--primary); letter-spacing: -1px; }
+.btn-nav { background: var(--yellow); color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.8rem; }
 
-.badge { 
-    background: var(--primary); color: #000; font-size: 0.65rem; font-weight: 900; 
-    padding: 3px 10px; border-radius: 5px; margin-bottom: 5px; display: inline-block;
+/* HERO */
+.hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero h1 { font-family: 'Montserrat'; font-size: 3rem; line-height: 1.1; margin-bottom: 20px; }
+.hero h1 span { color: var(--yellow); }
+.btn-main { background: var(--yellow); color: black; padding: 15px 30px; text-decoration: none; font-weight: 900; border-radius: 5px; display: inline-block; margin-top: 30px; }
+
+/* PLANOS */
+.container { padding: 80px 5%; text-align: center; }
+.section-title { font-family: 'Montserrat'; font-size: 2rem; margin-bottom: 50px; }
+
+.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+.plan-card {
+    background: var(--card-bg); padding: 40px 20px; border-radius: 15px;
+    border: 1px solid #222; transition: 0.3s;
 }
-.badge.red { background: #ff4444; color: #fff; }
+.plan-card.featured { border: 2px solid var(--yellow); position: relative; }
+.badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: black; padding: 5px 15px; border-radius: 20px; font-weight: 900; font-size: 0.7rem; }
 
-.section-title { font-size: 0.75rem; font-weight: 900; color: #666; margin: 15px 0 10px 5px; text-transform: uppercase; letter-spacing: 1px; }
+.price { font-size: 2rem; font-weight: 900; margin: 15px 0; color: var(--yellow); }
+.period { font-size: 0.9rem; color: #888; }
 
-/* Grupos de Informação */
-.info-group, .price-group { background: var(--inner-bg); border-radius: 12px; padding: 5px 15px; margin-bottom: 15px; }
-
-.info-row, .price-row { 
-    display: flex; justify-content: space-between; align-items: center; 
-    padding: 12px 0; border-bottom: 1px solid #222; font-size: 0.85rem; 
-}
-.info-row:last-child, .price-row:last-child { border: none; }
-
-.price-row.highlight { color: var(--primary); font-weight: 600; border-bottom: 2px solid var(--primary); }
-.sub-text small { color: #888; text-transform: uppercase; font-size: 0.7rem; }
-.dance { color: #ff00ff; }
-
-/* Caixas de Alerta e Tags */
-.alert-box { background: #ffcc0015; border: 1px dashed var(--primary); padding: 12px; border-radius: 10px; text-align: center; font-size: 0.8rem; color: var(--primary); }
-.price-tags { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
-.price-tags span { background: #333; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 600; }
-
-/* Animações Scroll */
-.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
+/* ANIMAÇÕES */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+}
