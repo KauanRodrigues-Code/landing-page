@@ -3,76 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA Fitness Center | Arapoti</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>DNA Fitness Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="logo">DNA <span>FITNESS</span></div>
-        <a href="https://wa.me/5543999999999" class="btn-nav">MATRICULE-SE</a>
     </header>
 
     <main class="container">
         
-        <section class="category-card reveal">
-            <div class="badge">MAIS PROCURADA</div>
-            <h2>MUSCULAÇÃO</h2>
-            <div class="content-grid">
-                <div class="info">
-                    <p>A maior e mais moderna academia de Arapoti. Acompanhamento com professores credenciados.</p>
-                    <div class="schedule-box">
-                        <h4><img src="https://cdn-icons-png.flaticon.com/512/2088/2088617.png" width="16"> HORÁRIOS</h4>
-                        <p><strong>Segunda a Sexta:</strong> 05:00h às 22:00h</p>
-                        <p><strong>Sábados (Manhã):</strong> 09:00h às 12:00h</p>
-                        <p><strong>Sábados (Tarde):</strong> 13:30h às 17:00h</p>
-                    </div>
-                </div>
-                <div class="pricing">
-                    <div class="price-row"><span>Mensal</span> <strong>R$ 148</strong></div>
-                    <div class="price-row"><span>Trimestral</span> <strong>R$ 140</strong></div>
-                    <div class="price-row featured"><span>Anual</span> <strong>R$ 128</strong><small>/mês</small></div>
-                    <div class="price-row"><span>Família (3+)</span> <strong>R$ 133</strong></div>
-                </div>
+        <section class="cat-block reveal">
+            <div class="cat-header">
+                <span class="tag-top">MAIS PROCURADA</span>
+                <h2>MUSCULAÇÃO</h2>
+                <p>A maior e mais moderna academia de Arapoti.</p>
+            </div>
+
+            <div class="schedule-card">
+                <h4><i class="clock-icon"></i> HORÁRIOS</h4>
+                <div class="row"><span>Segunda a Sexta:</span> <strong>05:00h às 22:00h</strong></div>
+                <div class="row"><span>Sábados (Manhã):</span> <strong>09:00h às 12:00h</strong></div>
+                <div class="row"><span>Sábados (Tarde):</span> <strong>13:30h às 17:00h</strong></div>
+            </div>
+
+            <div class="price-list">
+                <div class="p-item"><span>Mensal</span> <strong>R$ 148</strong></div>
+                <div class="p-item"><span>Trimestral</span> <strong>R$ 140</strong></div>
+                <div class="p-item highlight"><span>Anual</span> <strong>R$ 128 <small>/mês</small></strong></div>
+                <div class="p-item"><span>Família (3+)</span> <strong>R$ 133</strong></div>
             </div>
         </section>
 
-        <section class="category-card reveal">
-            <div class="badge jiu">GRACIE BARRA</div>
-            <h2>JIU-JITSU</h2>
-            <div class="content-grid">
-                <div class="info">
-                    <p>Arte suave para todas as idades. Disciplina e Defesa Pessoal.</p>
-                    <div class="promo-alert">
-                        Alunos DNA (Musculação) pagam apenas <strong>R$ 100,00</strong>
-                    </div>
+        <section class="cat-block reveal">
+            <div class="cat-header">
+                <span class="tag-top red">GRACIE BARRA</span>
+                <h2>JIU-JITSU</h2>
+            </div>
+
+            <div class="schedule-card">
+                <div class="row-jiu">
+                    <div class="jt-info"><span>Pequenos Campeões (5-9a)</span> <small>Terça e Quinta</small></div>
+                    <div class="jt-time">09h às 09h40</div>
                 </div>
-                <div class="schedule-table">
-                    <div class="s-item"><span>Pequenos Campeões (5-9a)</span> <strong>Ter/Qui: 09h - 09h40</strong></div>
-                    <div class="s-item"><span>Pequenos Campeões (5-8a)</span> <strong>Seg/Qua: 17h20 - 18h</strong></div>
-                    <div class="s-item"><span>Jr e Adolescentes (9-13a)</span> <strong>Seg/Qua: 18h10 - 19h</strong></div>
-                    <div class="s-item"><span>GB 1 e GB 2 (+14a)</span> <strong>Seg/Qua/Sex: 19h - 20h</strong></div>
-                    <div class="s-item"><span>No-Gi (+14a)</span> <strong>Ter/Qui: 19h30 - 20h30</strong></div>
+                <div class="row-jiu">
+                    <div class="jt-info"><span>Pequenos Campeões (5-8a)</span> <small>Segunda e Quarta</small></div>
+                    <div class="jt-time">17h20 às 18h</div>
                 </div>
+                <div class="row-jiu">
+                    <div class="jt-info"><span>Jr e Adolescentes (9-13a)</span> <small>Segunda e Quarta</small></div>
+                    <div class="jt-time">18h10 às 19h</div>
+                </div>
+                <div class="row-jiu">
+                    <div class="jt-info"><span>GB 1 e GB 2 (+14a)</span> <small>Seg/Qua/Sex</small></div>
+                    <div class="jt-time">19h às 20h</div>
+                </div>
+                <div class="row-jiu">
+                    <div class="jt-info"><span>No-Gi (+14a)</span> <small>Terça e Quinta</small></div>
+                    <div class="jt-time">19h30 às 20h30</div>
+                </div>
+            </div>
+            
+            <div class="promo-box">
+                Alunos DNA (Musculação) tem preço especial: <strong>R$ 100</strong>.
             </div>
         </section>
 
-        <section class="category-card reveal">
-            <h2 class="yellow-text">AULAS COLETIVAS</h2>
-            <div class="content-grid">
-                <div class="info">
-                    <p>Aulas dinâmicas inclusas ou à parte da mensalidade de musculação.</p>
-                    <div class="price-tags">
-                        <div class="tag">Diária: R$ 25</div>
-                        <div class="tag">Plano Viagem (6 dias): R$ 75</div>
-                    </div>
-                </div>
-                <div class="schedule-table">
-                    <div class="s-item"><span>Ginástica Localizada</span> <strong>Seg/Qua: 17h30 - 18h30</strong></div>
-                    <div class="s-item"><span>Step e Jump</span> <strong>Ter/Qui: 19h00 - 20h00</strong></div>
-                    <div class="s-item highlight-dança"><span>Aula de Dança</span> <strong>Seg/Qua: 18h45 - 19h45</strong></div>
-                </div>
+        <section class="cat-block reveal">
+            <div class="cat-header">
+                <h2>GINÁSTICA E DANÇA</h2>
+            </div>
+
+            <div class="schedule-card">
+                <div class="row"><span>Ginástica Localizada:</span> <strong>Seg/Qua (17h30)</strong></div>
+                <div class="row"><span>Step e Jump:</span> <strong>Ter/Qui (19h00)</strong></div>
+                <div class="row pink"><span>Aula de Dança:</span> <strong>Seg/Qua (18h45)</strong></div>
+            </div>
+
+            <div class="mini-prices">
+                <div class="tag">Diária: R$ 25</div>
+                <div class="tag">Plano Viagem (6 dias): R$ 75</div>
             </div>
         </section>
 
