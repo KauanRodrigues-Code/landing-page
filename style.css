@@ -4,16 +4,17 @@
     --gray: #121212;
     --light-gray: #1e1e1e;
     --text-muted: #b0b0b0;
-    /* Nova cor para profundidade */
-    --card-bg: rgba(30, 30, 30, 0.6); 
+    --card-bg: rgba(20, 20, 20, 0.8);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* UPDATE: Background com gradiente mais profundo para não ficar "chapado" */
 body { 
-    background: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
-    background-attachment: fixed; /* O fundo fica parado enquanto o conteúdo rola */
+    background: var(--black);
+    /* Background com textura de pontos (Mesh) para visual moderno */
+    background-image: radial-gradient(circle at 1px 1px, #1e1e1e 1px, transparent 0);
+    background-size: 32px 32px;
+    background-attachment: fixed;
     color: white; 
     font-family: 'Poppins', sans-serif; 
     line-height: 1.6; 
@@ -22,81 +23,77 @@ body {
 /* NAVBAR */
 header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 5%; background: rgba(0,0,0,0.95);
+    padding: 20px 5%; background: rgba(0,0,0,0.9);
     position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
-    backdrop-filter: blur(10px); /* Efeito de vidro no topo */
+    backdrop-filter: blur(10px);
 }
 .logo { font-family: 'Montserrat'; font-weight: 900; font-size: 1.4rem; }
 .logo span { color: var(--yellow); }
 .btn-nav { background: var(--yellow); color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.8rem; transition: 0.3s; }
-.btn-nav:hover { transform: scale(1.05); filter: brightness(1.1); }
+.btn-nav:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 204, 0, 0.3); }
 
 /* HERO */
 .hero { height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero h1 { font-family: 'Montserrat'; font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.1; }
+.hero h1 { font-family: 'Montserrat'; font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.1; font-weight: 900; }
 .hero h1 span { color: var(--yellow); }
-.hero p { color: var(--text-muted); margin-top: 15px; }
+.hero p { color: var(--text-muted); margin-top: 15px; font-size: 1.1rem; }
 
-/* CATEGORIAS (ESTILIZADAS COMO CARDS SEPARADOS) */
-.container { padding: 0 5% 100px; }
+/* CONTAINER E CARDS DE MODALIDADE */
+.container { padding: 40px 5% 100px; max-width: 1200px; margin: 0 auto; }
 
-/* Novo estilo para os containers de cada modalidade */
 .card-modalidade { 
     background: var(--card-bg);
     border: 1px solid #222;
-    padding: 40px;
-    border-radius: 20px;
-    margin-bottom: 40px; /* Reduzi um pouco o espaço para os cards ficarem próximos */
-    backdrop-filter: blur(5px);
-    transition: 0.4s ease;
+    padding: 50px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
+    transition: 0.4s;
 }
+.card-modalidade:hover { border-color: #444; transform: translateY(-5px); }
 
-.card-modalidade:hover {
-    border-color: #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
+.cat-title { font-family: 'Montserrat'; font-size: 2.2rem; border-left: 6px solid var(--yellow); padding-left: 20px; margin-bottom: 35px; letter-spacing: -1px; }
 
-.cat-title { 
-    font-family: 'Montserrat'; 
-    font-size: 2rem; 
-    border-left: 5px solid var(--yellow); 
-    padding-left: 15px; 
-    margin-bottom: 30px; 
-}
+.cat-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
+.cat-desc p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px; }
 
-.cat-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start; }
-.cat-desc p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; }
+/* HORÁRIOS E CLASSES */
+.horarios { list-style: none; background: rgba(0,0,0,0.4); padding: 25px; border-radius: 12px; font-size: 0.9rem; border: 1px solid #333; }
+.horarios li { margin-bottom: 8px; border-bottom: 1px solid #222; padding-bottom: 8px; }
+.horarios li:last-child { border: none; margin: 0; padding: 0; }
 
-.horarios { list-style: none; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; font-size: 0.9rem; border: 1px solid #222; }
-.horarios li { margin-bottom: 5px; }
+.jiu-classes { display: flex; flex-direction: column; gap: 12px; }
+.class-item { background: var(--light-gray); padding: 18px; border-radius: 10px; border-left: 4px solid #333; transition: 0.3s; font-weight: 600; }
+.class-item:hover { border-left-color: var(--yellow); background: #252525; }
 
 /* CARDS DE PREÇO */
-.price-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-.p-card { background: var(--light-gray); padding: 25px 15px; border-radius: 12px; text-align: center; border: 1px solid #333; transition: 0.3s; }
-.p-card.featured { border: 2px solid var(--yellow); position: relative; background: #252525; }
-.p-card:hover { transform: translateY(-5px); background: #252525; }
+.price-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
+.p-card { background: #1a1a1a; padding: 30px 15px; border-radius: 15px; text-align: center; border: 1px solid #333; transition: 0.3s; position: relative; }
+.p-card.featured { border: 2px solid var(--yellow); background: #221f10; }
+.p-card p { font-size: 1.8rem; font-weight: 900; color: var(--yellow); margin: 12px 0; }
+.p-card span { font-weight: bold; font-size: 0.85rem; color: white; }
+.tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: black; font-size: 0.65rem; padding: 5px 12px; border-radius: 20px; font-weight: 900; }
 
-.p-card span { font-weight: bold; font-size: 0.8rem; letter-spacing: 1px; }
-.p-card p { font-size: 1.6rem; font-weight: 900; color: var(--yellow); margin: 10px 0; }
-.tag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--yellow); color: black; font-size: 0.6rem; padding: 4px 10px; border-radius: 10px; font-weight: 900; }
+/* PROMO BOX E BÔNUS */
+.promo-box { background: rgba(255, 204, 0, 0.08); border: 1px dashed var(--yellow); padding: 25px; border-radius: 15px; text-align: center; }
+.highlight { font-size: 1.8rem; font-weight: 900; color: var(--yellow); display: block; margin: 5px 0; }
+.bonus-tag { display: inline-block; background: #28a745; color: white; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; margin-bottom: 20px; }
 
-.promo-box { background: #ffcc0010; border: 1px dashed var(--yellow); padding: 20px; border-radius: 10px; text-align: center; }
-.highlight { font-size: 2rem; font-weight: 900; color: var(--yellow); display: block; }
+/* BOTÃO CONSULTAR */
+.btn-check { text-align: center; color: var(--yellow); text-decoration: none; font-weight: bold; margin-top: 15px; border: 1px solid var(--yellow); padding: 12px; border-radius: 8px; transition: 0.3s; font-size: 0.9rem; }
+.btn-check:hover { background: var(--yellow); color: black; }
 
-.jiu-classes { display: flex; flex-direction: column; gap: 10px; }
-.class-item { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; border-left: 3px solid #444; transition: 0.3s; }
-.class-item:hover { border-left-color: var(--yellow); background: rgba(255,255,255,0.08); }
-
-/* ANIMAÇÃO JS */
-.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+/* ANIMAÇÃO */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
 /* MOBILE */
 @media (max-width: 900px) {
-    .cat-layout { grid-template-columns: 1fr; gap: 20px; }
+    .cat-layout { grid-template-columns: 1fr; gap: 30px; }
     .hero { height: 50vh; }
-    .card-modalidade { padding: 25px 15px; }
-    .cat-title { font-size: 1.6rem; }
+    .card-modalidade { padding: 30px 20px; }
+    .cat-title { font-size: 1.8rem; }
 }
 
-footer { text-align: center; padding: 50px; color: #444; font-size: 0.8rem; border-top: 1px solid #111; }
+footer { text-align: center; padding: 60px; color: #555; font-size: 0.85rem; border-top: 1px solid #111; }
