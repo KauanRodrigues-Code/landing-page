@@ -3,45 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA Fitness Center | A mais moderna de Arapoti</title>
+    <title>DNA Fitness Center | A Maior de Arapoti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <nav>
-            <img src="logo-dna.png" alt="DNA Fitness Logo" class="logo">
-            <button class="btn-cta-nav">Matricule-se</button>
-        </nav>
+        <div class="logo">DNA <span>FITNESS</span></div>
+        <a href="#" class="btn-whatsapp">Falar no WhatsApp</a>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>SUA MELHOR VERSÃO COMEÇA NO <span>DNA</span></h1>
-            <p>Musculação, Jiu-Jitsu e Ginástica na academia mais completa de Arapoti.</p>
-            <a href="#planos" class="btn-main">CONHECER PLANOS</a>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>SEU CORPO, SEU <span>DNA</span></h1>
+                <p>Musculação, Jiu-Jitsu e Ginástica na academia mais moderna de Arapoti.</p>
+                <a href="#planos" class="btn-cta">VER PLANOS E PREÇOS</a>
+            </div>
+        </section>
 
-    <section id="planos" class="pricing">
-        <h2>NOSSOS PLANOS</h2>
-        <div class="grid-planos">
-            <div class="plano">
-                <h3>MENSAL</h3>
-                <p class="price">R$ 148,00</p>
+        <section class="services section-padding">
+            <h2 class="section-title">O QUE <span>OFERECEMOS</span></h2>
+            <div class="grid">
+                <div class="card reveal">
+                    <h3>Musculação</h3>
+                    <p>Equipamentos modernos e instrutores prontos para guiar seu treino de força e estética.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Jiu-Jitsu</h3>
+                    <p>Arte suave com foco em disciplina e técnica. Turmas Kids, Adulto e No-Gi.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Step & Jump</h3>
+                    <p>Alta queima calórica e diversão em aulas coletivas cheias de energia.</p>
+                </div>
+                <div class="card reveal">
+                    <h3>Dança</h3>
+                    <p>Ritmos variados para você se exercitar enquanto se diverte com a nossa equipe.</p>
+                </div>
             </div>
-            <div class="plano destaque">
-                <span class="badge">MAIS VENDIDO</span>
-                <h3>ANUAL</h3>
-                <p class="price">R$ 128,00</p>
-                <small>/mês</small>
+        </section>
+
+        <section id="planos" class="pricing section-padding">
+            <h2 class="section-title">ESCOLHA SEU <span>PLANO</span></h2>
+            <div class="grid">
+                <div class="price-card reveal">
+                    <h3>Mensal</h3>
+                    <div class="price">R$ 148<span>,00</span></div>
+                    <p>Flexibilidade total</p>
+                </div>
+                <div class="price-card featured reveal">
+                    <span class="badge">MAIS POPULAR</span>
+                    <h3>Anual</h3>
+                    <div class="price">R$ 128<span>,00</span></div>
+                    <p>O melhor custo-benefício</p>
+                </div>
+                <div class="price-card reveal">
+                    <h3>Família</h3>
+                    <div class="price">R$ 133<span>,00</span></div>
+                    <p>Para 3+ pessoas</p>
+                </div>
             </div>
-            <div class="plano">
-                <h3>FAMÍLIA</h3>
-                <p>A partir de</p>
-                <p class="price">R$ 133,00</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>DNA FITNESS CENTER - Arapoti/PR</p>
+        <p>CNPJ: 40.064.756/0001-19</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
